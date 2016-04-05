@@ -8902,8 +8902,14 @@ imagination of @code{make}.
 Issue a warning message whenever @code{make} sees a reference to an
 undefined variable.  This can be helpful when you are trying to debug
 makefiles which use variables in complex ways.
-@end table
 
+@item --trace-variable=@var{variable}
+@cindex @code{--trace-variable}
+@cindex variables, tracing assignment
+Trace assignments to the specified variable, reporting the filename
+and line number, and the new value of the variable.
+
+@end table
 @node Implicit Rules, Archives, Running, Top
 @chapter Using Implicit Rules
 @cindex implicit rule

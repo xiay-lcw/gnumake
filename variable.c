@@ -199,6 +199,11 @@ define_variable_in_set (const char *name, unsigned int length,
   struct variable **var_slot;
   struct variable var_key;
 
+  if (trace_variable &&
+      !strcmp(name, trace_variable))
+     printf (_("%s:%d: setting %s to %s\n"),
+               flocp->filenm, flocp->lineno, name, value);
+
   if (set == NULL)
     set = &global_variable_set;
 
