@@ -40,6 +40,10 @@ this program.  If not, see <http://www.gnu.org/licenses/>.  */
 extern int try_implicit_rule (struct file *file, unsigned int depth);
 
 
+
+// TEst
+
+
 /* The test for circular dependencies is based on the 'updating' bit in
    'struct file'.  However, double colon targets have separate 'struct
    file's; make sure we always use the base of the double colon chain. */
