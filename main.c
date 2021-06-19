@@ -245,9 +245,6 @@ int job_rfd = -1;
 
 char *sync_mutex = 0;
 
-/* Trace assignments to this variable. */
-char *trace_variable = 0;
-
 /* Maximum load average at which multiple jobs will be run.
    Negative values mean unlimited, while zero means limit to
    zero load (which could be useful to start infinite jobs remotely
@@ -386,8 +383,6 @@ static const char *const usage[] =
                               Consider FILE to be infinitely new.\n"),
     N_("\
   --warn-undefined-variables  Warn when an undefined variable is referenced.\n"),
-    N_("\
-  --trace-variable=VARIABLE   Trace assignments to VARIABLE\n"),
     NULL
   };
 
@@ -451,7 +446,6 @@ static const struct command_switch switches[] =
       "warn-undefined-variables" },
     { CHAR_MAX+6, strlist, &eval_strings, 1, 0, 0, 0, 0, "eval" },
     { CHAR_MAX+7, string, &sync_mutex, 1, 1, 0, 0, 0, "sync-mutex" },
-    { CHAR_MAX+8, string, &trace_variable, 1, 1, 0, 0, 0, "trace-variable" },
     { 0, 0, 0, 0, 0, 0, 0, 0, 0 }
   };
 
